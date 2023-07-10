@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbería The Crown</title>
+  <link href="css/estilos.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="./imágenes/icono.ico" type="image/x-icon">
+
+</head>
+
+<body>
+  <header>
+    <br><br>
+    <div class="container">
+      <img class="logo" src="./imágenes/logotexto2.png" alt="Barbería The Crown" src>
+
+
+    </div>
+
+    <nav>
+      <div class="container">
+
+        <a href="index.html">INICIO</a>
+        <a href="servicios.html">NUESTROS SERVICIOS</a>
+        <a href="ubicacion.html">UBICACIÓN</a>
+        <a href="precios.html">PRECIOS</a>
+        <a href="#redes">NUESTRAS REDES</a>
+        <a href="contacto.html">CONTACTO</a>
+      </div>
+    </nav>
+  </header>
+  <main id="app">
+    <section id="precios">
+    <div class="container">
+      <div class="img-precios"></div>
+      <br><br>
+      <h1 class="nur">Conocé nuestros precios</h1>
+      <br> <br>
+      <p>Seleccioná más de un servicio y obtené grandes descuentos. </p>
+    </div>
+    <div class="grid-container" >
+      <div class="grid-item" v-for="elemento in servicios" >
+        <div class="grid-item">
+          <div class="image-container">
+            <img :src="elemento.imagen" :alt="elemento.nombre">
+          </div>
+          <div class="content-container">
+            <input type="checkbox" :id="elemento.id" :value="elemento.id" v-model="seleccionados">
+        <label :for="elemento.id">{{ elemento.nombre }}: ${{ elemento.precio }}</label>
+          </div>
+        </div>
+        
+      </div>
+
+      
+    </div>
+    
+    <div class="grid-item">
+      <div style="background-color: rgb(242, 213, 107);" id="precio">
+        Total antes de aplicar descuento: ${{total}}
+      </div>
+      <br>
+      <div style="background-color: rgb(242, 213, 107);" id="descuento">
+        {{descuento}}
+      </div>
+      <br>
+      <div style="background-color: rgb(242, 213, 107);" id="total">
+        Total a pagar: ${{precio_total}}
+      </div>
+    
+
+
+
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+          <script src="./VUE/main.js"></script>
+
+
+
+  </main>
+
+  <footer id="redes">
+    <div class="container">
+      <h2></h2>
+      <nav>
+        <br><br>
+        <a class="redes" href="https://www.facebook.com/" target="_blank"><img src="./imágenes/facebook.png"
+            alt="Facebook"></a>
+        <a class="redes" href="https://www.instagram.com/" target="_blank"><img src="./imágenes/instagram.png"
+            alt="Instagram"></a>
+        <a class="redes" href="https://web.whatsapp.com/send?phone=1144216907" target="_blank"><img
+            src="./imágenes/wapp.png" alt="WhatsApp"></a>
+        <a class="redes" href="mailto:info@barberiathecrown.com.ar" target="_blank"><img src="./imágenes/sobre.png"
+            alt="Mail"></a>
+        <br><br><br>
+        <h4> &copy; Barbería The Crown <br>C. de Alonso Heredia, 11 - Madrid <br> +34 602 65 85 71
+          <br>info@barberiathecrown.com.ar</h4>
+        <br><br><br>
+      </nav>
+      <nav>
+
+      </nav>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>

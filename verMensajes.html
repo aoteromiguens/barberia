@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería The Crown</title>
+    
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="./imágenes/icono.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header style="background-color: black;">
+        <div class="container">
+                <nav >
+                    <img class="logo" src="./imágenes/logo_low.png" style="width: 200px;" alt="Barbería The Crown">
+                            <a href="index.html">VOLVER A BARBERIA</a>
+                            <a href="admin.html">SERVICIOS</a>
+                            <a href="verMensajes.html">VER MENSAJES</a>
+                </nav>
+        </div>
+
+    </header>
+    
+        
+        <main>
+            
+            
+
+            <div id="app" class="container">
+                
+                
+        <div class="container">
+            <div class="img-servicios"></div>
+            <br>
+            <h1 class="nur">MENSAJES</h1>
+            
+            
+        </div>
+                
+                
+                
+                <div v-if="error">
+                    <p>Lo sentimos , ........</p>
+                </div>
+                <div v-else>
+                    <section v-if="cargando">
+                        <div class="spinner-border"></div>
+                        <p>Cargando .....</p>
+                    </section>
+                    <section v-else>
+                        <div class="color">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Recibido</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Correo</th>
+                                        <th scope="col">Mensaje</th>
+                                        <th scope="col">Telefono</th>
+                                        
+                                        <th scope="col">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class=""  v-for="mensaje in mensajes">
+                                        <td scope="row">{{mensaje.hora_envio}}</td>
+                                        <td>{{mensaje.name}}</td>
+                                        <td>{{mensaje.email}}</td>
+                                        <td>{{mensaje.message}}</td>
+                                        <td>{{mensaje.phone}}</td>
+                                        
+                                        <td>
+                                    
+                                          <button type="button" class="btn btn-danger" v-on:click="eliminar(mensaje.id)" >Eliminar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    
+            
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+            <script src="./VUE/mensajes.js"></script>
+            
+
+
+
+    </main>
+
+    <footer >
+        <div class="container">
+            <div class="espacio"></div>
+           
+
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

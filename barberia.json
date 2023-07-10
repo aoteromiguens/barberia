@@ -1,0 +1,49 @@
+[
+    {
+        "id": "P1",
+        "servicio": "Afeitado",
+        "precio": 1000,
+        "imagen": "./Finales/afeitado.jpg",
+        "descripcion": "Utilizamos las mejores cremas para lograr el mejor afeitado"
+    },
+
+    {
+        "id": "P2",
+        "servicio": "Claritos",
+        "precio": 1000,
+        "imagen": "./Finales/claritos.jpg",
+        "descripcion": "Iluminá tu cabello con dos o tres tonos menos que el original"
+    },
+ 
+    {
+        "descripcion": "Gran carta de cortes con tijera o navaja"
+        "id": "P3",
+        "imagen": "./Finales/corte.jpg",
+        "servicio": "Corte",
+        "precio": 1500,
+    },
+
+    {
+        "id":"P4",
+        "servicio": "Lavado",
+        "precio": 1000,
+        "imagen": "./Finales/LAVADO.jpg",
+        "descripcion": "Con aceites vegetales o tradicional"
+    },
+
+    {
+        "id":"P5",
+        "servicio": "Modelado",
+        "precio": 1000,
+        "imagen": "./Finales/modelado.jpg",
+        "descripcion": "Esculpimos tu barba"
+    },
+
+    {
+        "id": "P6",
+        "servicio": "Spa",
+        "precio": 1000,
+        "imagen": "./imágenes/Finales/spa2.jpg",
+        "descripcion": "Revitalizamos el bello facial"
+    }
+]

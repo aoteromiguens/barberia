@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería The Crown</title>
+    
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="./imágenes/icono.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header style="background-color: black;">
+        <div class="container">
+                <nav >
+                    <img class="logo" src="./imágenes/logo_low.png" style="width: 200px;" alt="Barbería The Crown">
+                            <a href="index.html">VOLVER A BARBERIA</a>
+                            <a href="admin.html">SERVICIOS</a>
+                            <a href="verMensajes.html">VER MENSAJES</a>
+                </nav>
+        </div>
+
+    </header>
+    
+        
+        <main>
+            
+            
+
+            <div id="app" class="container">
+                
+                
+        <div class="container">
+            <div class="img-servicios"></div>
+            <br>
+            <h1 class="nur">Administrar Servicios</h1>
+            
+            
+        </div>
+                
+                <a  class="btn btn-primary" href="servicio_nuevo.html">Nuevo</a>
+                
+                <div v-if="error">
+                    <p>Lo sentimos , ........</p>
+                </div>
+                <div v-else>
+                    <section v-if="cargando">
+                        <div class="spinner-border"></div>
+                        <p>Cargando .....</p>
+                    </section>
+                    <section v-else>
+                        <div class="color">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class=""  v-for="producto in servicios">
+                                        <td scope="row">{{producto.id}}</td>
+                                        <td>{{producto.nombre}}</td>
+                                        <td>{{producto.precio}}</td>
+                                        <td>{{producto.descripcion}}</td>
+                                        <td>
+                                            <img width="100"  :src="producto.imagen" :alt="producto.nombre">
+                                        </td>
+                                        <td>
+                                    <a class="btn btn-primary" :href="'editar_servicio.html?id='+ producto.id" >Editar</a>
+                                          <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    
+            
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+            <script src="./VUE/main.js"></script>
+            
+
+
+
+    </main>
+
+    <footer >
+        <div class="container">
+            <div class="espacio"></div>
+           
+
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

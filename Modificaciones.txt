@@ -1,0 +1,9 @@
+git commit -m
+
+Se añadió el Iframe de Google
+Se modificaron algunos valores en el CSS
+Se añadio vínculo a "Contacto.html"
+Borrado de algunos comentarios
+Se agregó mensaje de "Mensaje enviado satisfactoriamente"
+Modificación del botón del formulario que pasó de texto blanco a texto negro para que sea más legible por su fondo
+Pasaje del logo de la parte izquierda a la parte central

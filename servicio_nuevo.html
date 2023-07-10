@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería The Crown</title>
+    
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="./imágenes/icono.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header style="background-color: black;">
+        <div class="container">
+                <nav >
+                    <img class="logo" src="./imágenes/logo_low.png" style="width: 200px;" alt="Barbería The Crown">
+                            <a href="index.html">VOLVER A BARBERIA</a>
+                            <a href="admin.html">SERVICIOS</a>
+                            <a href="verMensajes.html">VER MENSAJES</a>
+                </nav>
+        </div>
+
+    </header>
+    <main>
+        
+        <div class="container" id="app">
+            <form style="border: 2px solid black; margin:10px auto ; width: 400px; padding: 20px; ">
+             <h1>Alta de Servicio</h1>
+             <div class="mb-3">
+               <label for="nombre">Nombre: </label>
+               <pre><input type="text" name="nombre" id="nombre" v-model="nombre" style="width: 90%;" ></pre>
+               
+             </div>
+             <div class="mb-3">
+               <label for="precio">Precio: </label>
+               <pre><input type="number" name="precio" id="precio" v-model="precio" style="width: 90%;"></pre>
+            </div>
+            <div class="mb-3">
+              <label for="descripcion">Descripción: </label>
+              <pre><textarea name="descripcion" id="descripcion" v-model="descripcion" rows="10" style="width: 90%;"></textarea></pre>
+              
+            </div>
+            <div class="mb-3">
+              <label for="imagen">Imagen: </label>
+              <pre><input type="text" name="imagen" id="imagen" v-model="imagen" style="width: 90%;"></pre>
+              <img style="width: 90%;" :src="imagen" alt="">
+            </div>
+              <button type="button" class="btn btn-primary" v-on:click="grabar()" style="margin-right: 20px;">Grabar</button>
+              <button type="button" class="btn btn-primary" v-on:click="cancelar()" style="margin-right: 20px;">Cancelar</button>
+              
+          </form>
+        </div>
+      </main>
+    
+
+
+
+
+
+
+
+
+            
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+            <script src="./VUE/main.js"></script>
+            
+
+
+
+    </main>
+
+    <footer >
+        <div class="container">
+            <div class="espacio"></div>
+           
+
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
